@@ -68,7 +68,7 @@ def mergeListsByNumber(*arg):
     arg[1].sort()
     sortedList = []
     while len(arg[0]) > 0 or len(arg[1]) > 0:
-        # if one of them is 0 the append the other
+        # if one of them has 0 the append the other
         if len(arg[0]) == 0:
             sortedList += arg[1]
             arg[1] = []
@@ -92,3 +92,34 @@ def mergeListsByNumber(*arg):
         x = mergeListsByNumber(arg)
         return(x)
 
+def mergeListsByAlpha(*arg, case = "upper"):
+    if len(arg) == 1:
+        arg = arg[0]
+    arg = list(arg)
+    arg[0].sort()
+    arg[1].sort()
+    sortedList = []
+    while len(arg[0]) > 0 or len(arg[1]) > 0:
+        # if one of them has 0 the append the other
+        if len(arg[0]) == 0:
+            sortedList += arg[1]
+            arg[1] = []
+        elif len(arg[1]) == 0:
+            sortedList += arg[0]
+            arg[0] = []
+        else:
+            if arg[0][0] <= arg[1][0]:
+                sortedList.append(arg[0][0])
+                arg[0].remove(arg[0][0])
+            else:
+                sortedList.append(arg[1][0])
+                arg[1].remove(arg[1][0])
+    
+    arg.remove(arg[0])
+    arg[0] = sortedList
+    
+    if len(arg) <= 1:
+        return(arg[0])
+    else:
+        x = mergeListsByNumber(arg)
+        return(x)
