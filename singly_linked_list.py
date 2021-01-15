@@ -58,7 +58,7 @@ class singlyLinkedList:
         elements = []
         currentNode= self.head
         while currentNode.next != None:
-            currentNode= currentNode.next
+            currentNode = currentNode.next
             elements.append(currentNode.data)
         print(elements)
     
@@ -74,4 +74,26 @@ class singlyLinkedList:
             if currentIndex == index:
                 lastNode.next = currentNode.next
                 return
+            currentIndex += 1
+
+    def insertBefore(self, data, item):
+        newNode = node(data)
+        currentNode = self.head
+        currentIndex = 0
+        print("item",item)
+        while currentNode.next != None:
+            currentNode = currentNode.next
+            if currentNode.data == item:
+                self.insertAtIndex(data, currentIndex)
+            currentIndex += 1
+
+    def insertAfter(self, data, item):
+        newNode = node(data)
+        currentNode = self.head
+        currentIndex = 0
+        print("item",item)
+        while currentNode.next != None:
+            currentNode = currentNode.next
+            if currentNode.data == item:
+                self.insertAtIndex(data, currentIndex+1)
             currentIndex += 1
