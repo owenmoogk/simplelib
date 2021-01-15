@@ -52,7 +52,7 @@ class singlyLinkedList:
         count = 0
         while currentNode.next != None:
             count += 1
-            currentNode= currentNode.next
+            currentNode = currentNode.next
         return(count)
     
     def display(self):
@@ -113,4 +113,17 @@ class singlyLinkedList:
                 return(True)
         return(False)
 
-    # def getItemIndex(self, item)
+    def getItemIndex(self, item):
+        currentNode = self.head
+        currentIndex = 0
+        indexes = []
+        while currentNode.next != None:
+            currentNode = currentNode.next
+            if currentNode.data == item:
+                indexes.append(currentIndex)
+            currentIndex += 1
+        if len(indexes) == 0:
+            return
+        if len(indexes) == 1:
+            return(indexes[0])
+        return(indexes)
