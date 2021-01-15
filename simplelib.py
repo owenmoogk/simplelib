@@ -50,3 +50,13 @@ def primesInList(numList):
         if isPrime(i):
             primeList.append(i)
     return(primeList)
+
+def getDictKeys(dictionary):
+    return(list(dictionary.keys()))
+
+def mergeLists(*arg):
+    finalList = []
+    for i in arg:
+        finalList += i
+    return(finalList)
+
