@@ -1,6 +1,6 @@
 class node:
     
-    def __init__(self, data = None, next=None):
+    def __init__(self, data = None, next = None):
         self.data = data
         self.next = next
 
@@ -17,8 +17,11 @@ class singlyLinkedList:
         currentNode.next = newNode
 
     def insertAtIndex(self, data, index):
-        if index >= self.size() or index < 0:
+        if index > self.size() or index < 0:
             print("error, out of range")
+            return
+        if index == self.size():
+            self.append(data)
             return
         newNode = node(data)
         currentIndex = 0
@@ -26,7 +29,6 @@ class singlyLinkedList:
         while True:
             lastNode = currentNode
             currentNode = currentNode.next
-            # if at the datapoint to be extracted
             if currentIndex == index:
                 lastNode.next = newNode
                 newNode.next = currentNode
@@ -41,7 +43,6 @@ class singlyLinkedList:
         currentNode = self.head
         while True:
             currentNode = currentNode.next
-            # if at the datapoint to be extracted
             if currentIndex == index:
                 return(currentNode.data)
             currentIndex += 1
@@ -74,6 +75,16 @@ class singlyLinkedList:
             if currentIndex == index:
                 lastNode.next = currentNode.next
                 return
+            currentIndex += 1
+
+    def eraseItem(self,item):
+        currentNode = self.head
+        currentIndex = 0
+        while currentNode.next != None:
+            currentNode = currentNode.next
+            if currentNode.data == item:
+                self.erase(currentIndex)
+                break
             currentIndex += 1
 
     def insertBefore(self, data, item):
