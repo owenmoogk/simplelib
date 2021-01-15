@@ -88,10 +88,8 @@ class singlyLinkedList:
             currentIndex += 1
 
     def insertBefore(self, data, item):
-        newNode = node(data)
         currentNode = self.head
         currentIndex = 0
-        print("item",item)
         while currentNode.next != None:
             currentNode = currentNode.next
             if currentNode.data == item:
@@ -99,10 +97,8 @@ class singlyLinkedList:
             currentIndex += 1
 
     def insertAfter(self, data, item):
-        newNode = node(data)
         currentNode = self.head
         currentIndex = 0
-        print("item",item)
         while currentNode.next != None:
             currentNode = currentNode.next
             if currentNode.data == item:
