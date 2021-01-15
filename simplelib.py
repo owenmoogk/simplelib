@@ -1,4 +1,4 @@
-import math
+import math, singly_linked_list, doubly_linked_list
 
 def getInteger(message = "Input an integer: ", errorMsg = "Not an integer, Try again."):
     while True:
@@ -123,3 +123,4 @@ def mergeListsByAlpha(*arg, case = "upper"):
     else:
         x = mergeListsByNumber(arg)
         return(x)
+
