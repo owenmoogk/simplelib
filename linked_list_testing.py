@@ -1,6 +1,6 @@
-import singly_linked_list
+import doubly_linked_list
 
-mylist = singly_linked_list.singlyLinkedList()
+mylist = doubly_linked_list.doublyLinkedList()
 
 mylist.display()
 mylist.append(1)
@@ -32,3 +32,7 @@ mylist.display()
 
 print(mylist.inList(1))
 print(mylist.inList(3))
+
+print(mylist.getItemIndex("boiiiii smd"))
+print(mylist.getItemIndex("hello"))
+print(mylist.getItemIndex(545))
