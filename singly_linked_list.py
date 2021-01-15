@@ -104,3 +104,13 @@ class singlyLinkedList:
             if currentNode.data == item:
                 self.insertAtIndex(data, currentIndex+1)
             currentIndex += 1
+
+    def inList(self, item):
+        currentNode = self.head
+        while currentNode.next != None:
+            currentNode = currentNode.next
+            if currentNode.data == item:
+                return(True)
+        return(False)
+
+    # def getItemIndex(self, item)
