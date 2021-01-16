@@ -65,6 +65,35 @@ class Node:
         elements.append(self.data)
         return(elements)
 
+    def getLevel(self, level):
+        returnList = []
+        if self is None:
+            return(returnList)
+        if level == 1:
+            returnList.append(self.data)
+            return(returnList)
+        elif level > 1:
+            if self.left:
+                returnList += (self.left.getLevel(level-1))
+            if self.right:
+                returnList += (self.right.getLevel(level-1))
+        return(returnList)
+
+    def getHeight(self):
+        if self.data == None:
+            return(0)
+        lheight = 0
+        rheight = 0
+        if self.left:
+            lheight = self.left.getHeight()
+        if self.right:
+            rheight = self.right.getHeight()
+
+        if lheight > rheight:
+            return(lheight + 1)
+        else:
+            return(rheight + 1)
+
     def search(self, val):
         if self.data == val:
             return(True)
