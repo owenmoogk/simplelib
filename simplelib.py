@@ -1,4 +1,4 @@
-import math, singly_linked_list, doubly_linked_list
+import math, singly_linked_list, doubly_linked_list, binary_search_tree
 
 def getInteger(message = "Input an integer: ", errorMsg = "Not an integer, Try again."):
     while True:

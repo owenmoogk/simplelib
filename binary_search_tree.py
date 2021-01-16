@@ -31,6 +31,13 @@ class Node:
         else:
             return(self.data)
 
+    def calculateSum(self):
+        elements = self.inOrderTraversal()
+        sum = 0
+        for i in elements:
+            sum += i
+        return(sum)
+
     def inOrderTraversal(self):
         elements = []
         if self.left:
