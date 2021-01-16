@@ -66,18 +66,18 @@ class Node:
         return(elements)
 
     def getLevel(self, level):
-        returnList = []
+        elements = []
         if self is None:
-            return(returnList)
+            return(elements)
         if level == 1:
-            returnList.append(self.data)
-            return(returnList)
+            elements.append(self.data)
+            return(elements)
         elif level > 1:
             if self.left:
-                returnList += (self.left.getLevel(level-1))
+                elements += (self.left.getLevel(level-1))
             if self.right:
-                returnList += (self.right.getLevel(level-1))
-        return(returnList)
+                elements += (self.right.getLevel(level-1))
+        return(elements)
 
     def getHeight(self):
         if self.data == None:
