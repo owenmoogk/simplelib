@@ -124,3 +124,24 @@ def mergeListsByAlpha(*arg, case = "upper"):
         x = mergeListsByNumber(arg)
         return(x)
 
+def removeDuplicatesFromList(array):
+    array = list(dict.fromkeys(array))
+    return(array)
+
+def getMedian(array):
+    array.sort()
+    length = len(array)
+    medianIndex = round(length/2) - 1
+    return(array[medianIndex])
+
+def getRange(array):
+    array.sort()
+    range = array[len(array)-1] - array[0]
+    return(range)
+
+def getAverage(array):
+    sum = 0
+    for i in array:
+        sum += i
+    average = sum / len(array)
+    return(average)
