@@ -7,3 +7,5 @@ add reversal of binary trees
 issubtree function(is a binary tree a subtree of another tree)
 
 delete halfnodes
+
+maybe.... iterate build tree to have even sides
