@@ -85,7 +85,6 @@ class Node:
             print(line)
 
     def _display_aux(self):
-        """Returns list of strings, width, height, and horizontal coordinate of the root."""
         # No child.
         if self.right is None and self.left is None:
             line = '%s' % self.data
@@ -133,20 +132,9 @@ def removeDuplicatesFromList(array):
     array = list(dict.fromkeys(array))
     return(array)
 
-def getMedian(array):
-    array.sort()
-    length = len(array)
-    medianIndex = round(length/2) - 1
-    return(array[medianIndex])
-
-def buildTree(elements):
+def buildTree(elements, rootVal = 0):
     elements = removeDuplicatesFromList(elements)
-    root = Node(elements[0])
-    for i in range(1,len(elements)):
+    root = Node(rootVal)
+    for i in range(0,len(elements)):
         root.addChild(elements[i])
     return(root)
-
-if __name__ == "__main__":
-    numbers = [8,13,4,56,-9,155,8,8,8]
-    numbersTree = buildTree(numbers)
-    print(numbersTree.findMax())
