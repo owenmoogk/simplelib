@@ -45,7 +45,25 @@ class Node:
         elements.append(self.data)
         if self.right:
             elements += self.right.inOrderTraversal()
-        return elements
+        return(elements)
+
+    def preOrderTraversal(self):
+        elements = []
+        elements.append(self.data)
+        if self.left:
+            elements += self.left.preOrderTraversal()
+        if self.right:
+            elements += self.right.preOrderTraversal()
+        return(elements)
+
+    def postOrderTraversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.postOrderTraversal()
+        if self.right:
+            elements += self.right.postOrderTraversal()
+        elements.append(self.data)
+        return(elements)
 
     def search(self, val):
         if self.data == val:
