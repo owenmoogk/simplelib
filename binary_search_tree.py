@@ -79,6 +79,12 @@ class Node:
                 elements += (self.right.getLevel(level-1))
         return(elements)
 
+    def levelOrderTraversal(self):
+        elements = []
+        for i in range(1,self.getHeight()+1):
+            elements += self.getLevel(i)
+        return(elements)
+
     def getHeight(self):
         if self.data == None:
             return(0)
