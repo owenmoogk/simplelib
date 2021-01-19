@@ -19,6 +19,26 @@ class Node:
             else:
                 self.right = Node(data)
     
+    def deleteHalfNodes(self):
+
+        # if leaf return self
+        if self.left is None and self.right is None: 
+            return(self)
+
+        if self.left is None: 
+            self.right = None
+            return(self)
+
+        if self.right is None: 
+            self.left = None
+            return(self)
+
+        # recursive
+        self.left = self.left.deleteHalfNodes()  
+        self.right = self.right.deleteHalfNodes() 
+        
+        return(self) 
+
     def findMin(self):
         if self.left:
             return(self.left.findMin())
@@ -162,6 +182,17 @@ class Node:
         zipped_lines = zip(left, right)
         lines = [first_line, second_line] + [a + u * ' ' + b for a, b in zipped_lines]
         return lines, n + m + u, max(p, q) + 2, n + u // 2
+
+    def delete(self):
+        # first delete both subtrees
+        if self.left != None:
+            self.left.delete() 
+        if self.right != None:
+            self.right.delete()
+        self.right = None
+        self.left = None
+        self.data = None
+        self = None
 
 def removeDuplicatesFromList(array):
     array = list(dict.fromkeys(array))

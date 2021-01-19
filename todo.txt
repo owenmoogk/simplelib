@@ -1,11 +1,7 @@
 add sort function for linked lists(thats gonna be painful lol)
 
-add inorder, preorder, and postorder for binary trees ()
-
 add reversal of binary trees
 
 issubtree function(is a binary tree a subtree of another tree)
-
-delete halfnodes
 
 maybe.... iterate build tree to have even sides

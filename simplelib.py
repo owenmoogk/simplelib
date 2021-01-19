@@ -145,3 +145,12 @@ def getAverage(array):
         sum += i
     average = sum / len(array)
     return(average)
+
+if __name__ == "__main__":
+    numbers = [8,56,13,4,3,5,6,7,-9,155,155,155]
+    numbersTree = binary_search_tree.buildTree(numbers, 7)
+    numbersTree.display()
+    numbersTree.addChild(-14)
+    numbersTree.display()
+    numbersTree.delete()
+    numbersTree.display()
