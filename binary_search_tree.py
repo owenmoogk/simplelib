@@ -104,6 +104,7 @@ class Node:
         return(elements)
 
     def getLevel(self, level):
+        # gets the elements in a given level
         elements = []
         if self is None:
             return(elements)
