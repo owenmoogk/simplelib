@@ -51,6 +51,24 @@ class Node:
         else:
             return(self.data)
 
+    def rightSideView(self):
+        returnList = []
+        returnList.append(self.data)
+        if self.right != None:
+            returnList += self.right.rightSideView()
+        elif self.left != None:
+            returnList += self.left.rightSideView()
+        return(returnList)
+
+    def leftSideView(self):
+        returnList = []
+        returnList.append(self.data)
+        if self.left != None:
+            returnList += self.left.leftSideView()
+        elif self.right != None:
+            returnList += self.right.leftSideView()
+        return(returnList)
+
     def calculateSum(self):
         elements = self.inOrderTraversal()
         sum = 0
@@ -184,7 +202,6 @@ class Node:
         return lines, n + m + u, max(p, q) + 2, n + u // 2
 
     def delete(self):
-        # first delete both subtrees
         if self.left != None:
             self.left.delete() 
         if self.right != None:

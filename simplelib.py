@@ -152,5 +152,11 @@ if __name__ == "__main__":
     numbersTree.display()
     numbersTree.addChild(-14)
     numbersTree.display()
-    numbersTree.delete()
-    numbersTree.display()
+    print(numbersTree.rightSideView())
+    print(numbersTree.leftSideView())
+
+
+
+    # numbersTree.delete()
+    # numbersTree.display()
+    
