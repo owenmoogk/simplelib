@@ -1,14 +1,32 @@
 *{
     font-family: 'IBM Plex Sans', sans-serif;
 }
+::selection{
+    background-color: rgba(0, 150, 255, .5);
+    color: white;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: grey; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: lightslategrey; 
+}
 body{
     margin: 50px;
+}
+body.darkMode{
+    background-color:#23272a;
 }
 .body{
     display: block;
     float: left;
     margin-left: 30px;
     width: calc(85% - 200px);
+    padding-left: 200px;
 }
 h1{
     font-size: 60px;
@@ -34,19 +52,41 @@ p{
     font-size: 20px;
     font-weight: bold;
 }
+.darkMode{
+    color: white;
+}
 .nav{
     float: left;
     width: 200px;
-    display: block;
+    display: flex;
     height: 100vh;
+    flex-direction: column;
+    position: fixed;
+}
+.nav a{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.nav a:hover{
+    background: lightgrey;
 }
 code{
     border-radius: 20px;
     background-color: rgb(230, 230, 230);
     width: 90%;
-    min-height: 100px;
-    display: block;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
     padding: 20px;
     font-family: 'Courier Prime', monospace;
-
+}
+code.darkMode{
+    background-color: #2c2f33;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 150, 255);
+}
+a:hover{
+    font-weight: lighter;
 }
