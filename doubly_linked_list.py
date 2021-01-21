@@ -138,3 +138,10 @@ class doublyLinkedList:
         if len(indexes) == 1:
             return(indexes[0])
         return(indexes)
+
+    def deleteList(self):
+        currentNode = self.head 
+        while currentNode != None: 
+            nextNode = currentNode.next
+            del(currentNode.data) 
+            currentNode = nextNode
