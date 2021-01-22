@@ -50,6 +50,9 @@ h2{
     line-height: 10px;
     margin-top: 60px;
 }
+h2.darkMode{
+    border-bottom: 10px solid rgba(0, 150, 255, 1);
+}
 p{
     font-size: 20px;
     font-weight: bold;
