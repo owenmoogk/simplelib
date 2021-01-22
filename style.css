@@ -78,6 +78,9 @@ p{
 .nav a:hover{
     font-weight: bold;
 }
+pre{
+    margin: 0px;
+}
 code{
     border-radius: 20px;
     background-color: rgb(230, 230, 230);
