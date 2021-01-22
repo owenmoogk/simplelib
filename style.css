@@ -17,9 +17,11 @@
 }
 body{
     margin: 50px;
+    transition: 0.3s;
 }
 body.darkMode{
     background-color:#23272a;
+    transition: 0.3s;
 }
 .body{
     display: block;
@@ -65,14 +67,17 @@ p{
 }
 .nav a{
     margin-bottom: 10px;
+    padding-left: 20px;
     font-size: 20px;
     color: black !important;
+    padding: 5px;
+    border-radius: 8px;
 }
 .nav a.darkMode{
     color: white !important;
 }
 .nav a:hover{
-    background: lightgrey;
+    font-weight: bold;
 }
 code{
     border-radius: 20px;
@@ -98,16 +103,18 @@ table{
     width: 100%;
     text-align: left;
     font-size: 20px;
+    border-spacing: 0px;
 }
 th{
-    border-bottom: 1px solid black;
+    border-bottom : 2px solid black;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 5px;
 }
 td{
-    padding-bottom: 10px;
-    padding-left: 10px;
+    border-bottom : 1px solid grey;
+    padding: 10px;
+    border-collapse:separate;
 }
 hr{
     width: 50%;
