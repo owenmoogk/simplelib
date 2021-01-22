@@ -66,6 +66,10 @@ p{
 .nav a{
     margin-bottom: 10px;
     font-size: 20px;
+    color: black !important;
+}
+.nav a.darkMode{
+    color: white !important;
 }
 .nav a:hover{
     background: lightgrey;
@@ -81,12 +85,30 @@ code{
     font-family: 'Courier Prime', monospace;
 }
 code.darkMode{
-    background-color: #2c2f33;
+    background-color: rgb(60,60,60);
 }
 a{
     text-decoration: none;
-    color: rgb(0, 150, 255);
+    color: rgb(0, 150, 255) !important;
 }
 a:hover{
     font-weight: lighter;
+}
+table{
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+th{
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+td{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+hr{
+    width: 50%;
 }
