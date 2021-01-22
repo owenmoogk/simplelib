@@ -1,11 +1,11 @@
 <table>
     <row>
         <function>getInteger(message = "Input an integer: ", errorMsg = "Not an integer, Try again.")</function>
-        <desc>Prompts user for an input in console, and only returns once it is an int. (Returns the int)</desc>
+        <desc>Prompts user for an input in console, and only returns once it is an int. (Returns the int). Optional parameters for the propt message and the error message.</desc>
     </row>
     <row>
         <function>getFloat(message = "Input an number: ", errorMsg = "Not an number, Try again.")</function>
-        <desc>Prompts user for an input in console, and only returns once it is an float. (Returns the float).</desc>
+        <desc>Prompts user for an input in console, and only returns once it is an float. (Returns the float). Optional parameters for the propt message and the error message.</desc>
     </row>
     <row>
         <function>getString(message = "Input a string: ")</function>
@@ -36,35 +36,23 @@
         <desc>Merges some number of list in numerical order, returns one list.</desc>
     </row>
     <row>
-        <function>preOrderTraversal()</function>
-        <desc>Returns list of nodes in array. (Root, Left, Right)</desc>
+        <function>mergeListsByAlpha(*arg)</function>
+        <desc>Merges some number of list in alphabetical order, returns one list.</desc>
     </row>
     <row>
-        <function>postOrderTraversal()</function>
-        <desc>Returns list of nodes in array. (Left, Right, Root)</desc>
+        <function>removeDuplicatesFromList(array)</function>
+        <desc>Given some list, returns the list without duplicates.</desc>
     </row>
     <row>
-        <function>levelOrderTraversal()</function>
-        <desc>Returns list of nodes in array, level by level.</desc>
+        <function>getMedian(array)</function>
+        <desc>Given a list of numbers, returns the median.</desc>
     </row>
     <row>
-        <function>getLevel(level)</function>
-        <desc>Given an integer, returns all nodes in said level of the BST.</desc>
+        <function>getRange(array)</function>
+        <desc>Given a list of numbers, returns the range.</desc>
     </row>
     <row>
-        <function>getHeight()</function>
-        <desc>Returns the maximum height / depth of tree.</desc>
-    </row>
-    <row>
-        <function>search(val)</function>
-        <desc>Searches the tree for value. Returns true or false. val can be float or str.</desc>
-    </row>
-    <row>
-        <function>display()</function>
-        <desc>Displays tree in console.</desc>
-    </row>
-    <row>
-        <function>delete()</function>
-        <desc>Deletes tree.</desc>
+        <function>getAverage(array)</function>
+        <desc>Given a list of numbers, returns the average.</desc>
     </row>
 </table>

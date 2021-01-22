@@ -2,7 +2,6 @@ darkmode = false
 function toggleDarkMode(){
     $("*").toggleClass('darkMode')
     if (darkmode){
-        console.log("i got here")
         darkmode = false
         document.getElementById("dark-mode-button").text = "Dark mode"
     }
@@ -36,7 +35,6 @@ function table(xml, tableID) {
     xmlDoc = xml.responseXML;
     functions = xmlDoc.getElementsByTagName("function");
     descriptions = xmlDoc.getElementsByTagName('desc');
-    console.log(functions)
     
     // loading text variable
     for (i = 0; i < functions.length; i++) { 
@@ -44,8 +42,5 @@ function table(xml, tableID) {
     }
 
     // put into container
-    console.log(txt)
-    console.log(tableID)
-    console.log(document.getElementById(tableID).innerHTML)
     document.getElementById(tableID).innerHTML += txt
 }
