@@ -32,12 +32,8 @@
         <desc>Given some number of lists, returns one list with all the values merged.</desc>
     </row>
     <row>
-        <function>mergeListsByNumber(*arg)</function>
-        <desc>Merges some number of list in numerical order, returns one list.</desc>
-    </row>
-    <row>
-        <function>mergeListsByAlpha(*arg)</function>
-        <desc>Merges some number of list in alphabetical order, returns one list.</desc>
+        <function>mergeListsAndSort(*arg)</function>
+        <desc>Merges some number of list in numerical / alphabetical order in a merge sort fashion, returning one list. Lists must only contain either strings or numbers, not both.</desc>
     </row>
     <row>
         <function>removeDuplicatesFromList(array)</function>
