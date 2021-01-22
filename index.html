@@ -95,7 +95,7 @@
             <p>
                 Linked lists are a data structure similar to arrays / lists, but are superior in some cases. Instead of items having indexes, 
                 they are all linked to eachother, leading to quicker 'big O' time for many operations. 
-                SimpleLib is compatible with both singly linked lists and doubly linked lists.
+                SimpleLib is compatible with both singly linked lists and doubly linked lists. At this point they both employ the same functions.
             </p>
             <table id="linked-list-table">
                 <tr>
@@ -103,8 +103,23 @@
                     <th>Description</th>
                 </tr>
             </table>
-            <code> 
-                Examples go here.
+            <code>
+                mylist = singly_linked_list.singlyLinkedList() <br>
+                mylist.append(1)<br>
+                mylist.append(6)<br>
+                mylist.display()<br>
+                mylist.erase(1)<br>
+                mylist.insertAfter("hello",1)<br>
+                mylist.display()<br>
+                print("Size:",mylist.size())<br>
+                print("'hello' index:",mylist.getItemIndex("hello"))<br>
+            </code>
+            <br>
+            <code>
+                [1, 6] <br>
+                [1, 'hello']<br>
+                Size: 2<br>
+                'hello' index: 1
             </code>
 
             <br><hr>
@@ -141,6 +156,7 @@
     <script>
         populateTable("assets/bst.xml","bst-table")
         populateTable("assets/misc.xml", "misc-table")
+        populateTable("assets/linked-list.xml", 'linked-list-table')
         addGithubLink()
     </script>
 </html>
