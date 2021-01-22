@@ -2,7 +2,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 ::selection{
-    background-color: rgba(0, 150, 255, .5);
+    background-color: rgba(0, 150, 255, .7);
     color: white;
 }
 /* scrollbar */
@@ -17,6 +17,7 @@
 }
 body{
     transition: 0.3s;
+    margin: 50px;
 }
 body.darkMode{
     background-color:#23272a;
@@ -42,7 +43,7 @@ h1{
     font-weight: bold;
 }
 h2{
-    font-size: 30px;
+    font-size: 35px;
     font-style: italic;
     border-bottom: 10px solid rgba(0, 150, 255, .3);
     width: fit-content;
@@ -106,6 +107,7 @@ table{
     text-align: left;
     font-size: 20px;
     border-spacing: 0px;
+    padding-bottom: 20px;
 }
 th{
     border-bottom : 2px solid black;
