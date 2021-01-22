@@ -1,0 +1,70 @@
+<table>
+    <row>
+        <function>getInteger(message = "Input an integer: ", errorMsg = "Not an integer, Try again.")</function>
+        <desc>Prompts user for an input in console, and only returns once it is an int. (Returns the int)</desc>
+    </row>
+    <row>
+        <function>getFloat(message = "Input an number: ", errorMsg = "Not an number, Try again.")</function>
+        <desc>Prompts user for an input in console, and only returns once it is an float. (Returns the float).</desc>
+    </row>
+    <row>
+        <function>getString(message = "Input a string: ")</function>
+        <desc>Prompts user for input, and returns input as a string.</desc>
+    </row>
+    <row>
+        <function>isPrime(num)</function>
+        <desc>Returns true if prime, if not returns false.</desc>
+    </row>
+    <row>
+        <function>getPrimesUpTo(rangeMax)</function>
+        <desc>Returns a list of primes up to a given number, using the Sieve of Eratosthenes.</desc>
+    </row>
+    <row>
+        <function>primesInList(numList)</function>
+        <desc>Given a list of numbers, returns a list of only the primes.</desc>
+    </row>
+    <row>
+        <function>getDictKeys(dictionary)</function>
+        <desc>Given a dictionary, returns the keys as a list.</desc>
+    </row>
+    <row>
+        <function>mergeLists(*arg)</function>
+        <desc>Given some number of lists, returns one list with all the values merged.</desc>
+    </row>
+    <row>
+        <function>mergeListsByNumber(*arg)</function>
+        <desc>Merges some number of list in numerical order, returns one list.</desc>
+    </row>
+    <row>
+        <function>preOrderTraversal()</function>
+        <desc>Returns list of nodes in array. (Root, Left, Right)</desc>
+    </row>
+    <row>
+        <function>postOrderTraversal()</function>
+        <desc>Returns list of nodes in array. (Left, Right, Root)</desc>
+    </row>
+    <row>
+        <function>levelOrderTraversal()</function>
+        <desc>Returns list of nodes in array, level by level.</desc>
+    </row>
+    <row>
+        <function>getLevel(level)</function>
+        <desc>Given an integer, returns all nodes in said level of the BST.</desc>
+    </row>
+    <row>
+        <function>getHeight()</function>
+        <desc>Returns the maximum height / depth of tree.</desc>
+    </row>
+    <row>
+        <function>search(val)</function>
+        <desc>Searches the tree for value. Returns true or false. val can be float or str.</desc>
+    </row>
+    <row>
+        <function>display()</function>
+        <desc>Displays tree in console.</desc>
+    </row>
+    <row>
+        <function>delete()</function>
+        <desc>Deletes tree.</desc>
+    </row>
+</table>
