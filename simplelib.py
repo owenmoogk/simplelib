@@ -92,7 +92,7 @@ def mergeListsByNumber(*arg):
         x = mergeListsByNumber(arg)
         return(x)
 
-def mergeListsByAlpha(*arg, case = "upper"):
+def mergeListsByAlpha(*arg):
     if len(arg) == 1:
         arg = arg[0]
     arg = list(arg)
