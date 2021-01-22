@@ -115,6 +115,9 @@ th{
     padding-top: 10px;
     padding-bottom: 5px;
 }
+th.darkmode{
+    border-bottom: 2px solid white;
+}
 td{
     border-bottom : 1px solid grey;
     padding: 10px;
