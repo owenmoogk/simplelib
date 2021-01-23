@@ -38,9 +38,8 @@ class hashTable:
 if __name__ == "__main__":
     t = hashTable()
     t["march 6"] = 130
-    t["mbrbh 6"] = 27
     t["march 6"] = 20
-    t["april 2"] = "boiii"
-    t["april 3"] = "to be deleted"
-    del t["march 6"]
-    print(t.arr)
+    t["april 2"] = "45 degrees"
+    t["april 3"] = "23 degrees"
+    print(t["march 6"])
+    print(t["april 2"])
