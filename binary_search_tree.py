@@ -231,6 +231,6 @@ if __name__ == "__main__":
     print(numbersTree.rightSideView())
     print(numbersTree.leftSideView())
     print(numbersTree.calculateSum())
-    
-    numbersTree.delete()
-    numbersTree.display()
+
+    # numbersTree.delete()
+    # numbersTree.display()
