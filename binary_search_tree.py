@@ -222,3 +222,15 @@ def buildTree(elements, rootVal = 0):
     for i in range(0,len(elements)):
         root.addChild(elements[i])
     return(root)
+
+if __name__ == "__main__":
+    numbers = [8,56,13,4,3,5,6,7,-9,155,155,155]
+    numbersTree = buildTree(numbers, 7)
+    numbersTree.addChild(-14.5)
+    numbersTree.display()
+    print(numbersTree.rightSideView())
+    print(numbersTree.leftSideView())
+    print(numbersTree.calculateSum())
+    
+    numbersTree.delete()
+    numbersTree.display()

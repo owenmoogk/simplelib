@@ -115,20 +115,8 @@ def getAverage(array):
     return(average)
 
 if __name__ == "__main__":
-    numbers = [8,56,13,4,3,5,6,7,-9,155,155,155]
-    numbersTree = binary_search_tree.buildTree(numbers, 7)
-    numbersTree.addChild(-14.5)
-    numbersTree.display()
-    print(numbersTree.rightSideView())
-    print(numbersTree.leftSideView())
-    print(numbersTree.calculateSum())
-
     list1 = [1,14,5,64]
     list2 = [2,87,8]
     list3 = [53,0]
     print(mergeLists(list1,list2,list3))
     print(mergeListsAndSort(list1, list2, list3))
-
-    # numbersTree.delete()
-    # numbersTree.display()
-    
