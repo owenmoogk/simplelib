@@ -20,7 +20,7 @@ body{
     margin: 50px;
 }
 body.darkMode{
-    background-color:#23272a;
+    background-color:#1E1E1E;
     transition: 0.3s;
 }
 .body{
