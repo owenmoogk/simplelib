@@ -51,4 +51,24 @@
         <function>getAverage(array)</function>
         <desc>Given a list of numbers, returns the average.</desc>
     </row>
+    <row>
+        <function>decimalToBinary(number)</function>
+        <desc>Given a decimal number, returns the binary counterpart. Input can be string or int.</desc>
+    </row>
+    <row>
+        <function>decimalToHex(number)</function>
+        <desc>Given a decimal number, returns the hexidecimal counterpart. Input must be int.</desc>
+    </row>
+    <row>
+        <function>binaryToDecimal(number)</function>
+        <desc>Given a binary number, returns the decimal counterpart. Input can be string or int.</desc>
+    </row>
+    <row>
+        <function>hexToDecimal(number)</function>
+        <desc>Given a hexidecimal number, returns the decimal counterpart. Input can be string or int.</desc>
+    </row>
+    <row>
+        <function>reverseString(string)</function>
+        <desc>Given a string, returns the reverse.</desc>
+    </row>
 </table>
