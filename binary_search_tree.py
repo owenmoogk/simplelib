@@ -76,6 +76,16 @@ class Node:
             sum += i
         return(sum)
 
+    def invertTree(self):
+        if self.right != None:
+            self.right.invertTree()
+        if self.left != None:
+            self.left.invertTree()
+        rightTemp = self.right
+        leftTemp = self.left
+        self.right = leftTemp
+        self.left = rightTemp
+
     def inOrderTraversal(self):
         elements = []
         if self.left:
@@ -231,6 +241,11 @@ if __name__ == "__main__":
     print(numbersTree.rightSideView())
     print(numbersTree.leftSideView())
     print(numbersTree.calculateSum())
+    # numbersTree.invertTree()
+    numbersTree.display()
+    numbersTree.deleteNode(5)
+    print("deleted")
+    numbersTree.display()
 
     # numbersTree.delete()
     # numbersTree.display()
