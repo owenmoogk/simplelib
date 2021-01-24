@@ -60,7 +60,14 @@
             <p>
                 The hashmap functions were implemented into SimpleLib for users to have a bit more access to the hashmap
                 than a python dictionary would allow. But in most cases, a dictionary is the best choice. Syntax is equivalent to a dictionary.
+                This implementation uses ascii key searching and list overlap.
             </p>
+            <table id="hashmap-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
             <p>Example:</p>
             <code> 
                 t["march 6"] = 130 <br>
@@ -73,7 +80,7 @@
             <br>
             <p>Output:</p>
             <code>
-                130 <br>
+                20 <br>
                 45 degrees
             </code>
 
@@ -171,12 +178,14 @@
                 list3 = [53,0] <br>
                 print(mergeLists(list1,list2,list3)) <br>
                 print(mergeListsAndSort(list1, list2, list3)) <br>
+                print(reverseString("hello, my name is owen"))
             </code>
             <br>
             <p>Output:</p>
             <code>
                 [1, 14, 5, 64, 2, 87, 8, 53, 0] <br>
-                [0, 1, 2, 5, 8, 14, 53, 64, 87]
+                [0, 1, 2, 5, 8, 14, 53, 64, 87] <br>
+                newo si eman ym ,olleh
             </code>
 
             <br><br>
@@ -184,6 +193,7 @@
         </div>
     </body>
     <script>
+        populateTable("assets/hashmap.xml","hashmap-table")
         populateTable("assets/bst.xml","bst-table")
         populateTable("assets/misc.xml", "misc-table")
         populateTable("assets/linked-list.xml", 'linked-list-table')
