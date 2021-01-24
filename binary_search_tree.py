@@ -163,6 +163,36 @@ class Node:
             else:
                 return(False)
 
+    def deleteNode(self, val):
+        if val < self.data:
+            if self.left:
+                self.left = self.left.deleteNode(val)
+        elif val > self.data:
+            if self.right:
+                self.right = self.right.deleteNode(val)
+        else:
+            if self.left == None and self.right == None:
+                return(None)
+            if self.left == None:
+                return(self.right)
+            if self.right == None:
+                return(self.left)
+            
+            minVal = self.right.findMin()
+            self.data = minVal
+            self.right = self.right.delete(minVal)
+        return(self)
+
+    def deleteNodeAndChildren(self, val):
+        if self.data < val:
+            self.right = self.right.deleteNodeAndChildren(val)
+            return self
+        elif self.data > val:
+            self.left = self.left.deleteNodeAndChildren(val)
+            return self
+        else:
+            return None
+
     def display(self):
         lines, *_ = self._display_aux()
         for line in lines:
@@ -245,6 +275,8 @@ if __name__ == "__main__":
     numbersTree.display()
     numbersTree.deleteNode(5)
     print("deleted")
+    numbersTree.display()
+    numbersTree.deleteNodeAndChildren(-9)
     numbersTree.display()
 
     # numbersTree.delete()
