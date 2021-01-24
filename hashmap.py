@@ -1,6 +1,6 @@
 class hashTable:
-    def __init__(self):
-        self.max = 20
+    def __init__(self, len = 100):
+        self.max = len
         # setting 100 values to an array
         self.arr = [[] for i in range(self.max)]
 
