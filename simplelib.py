@@ -114,9 +114,57 @@ def getAverage(array):
     average = sum / len(array)
     return(average)
 
+def decimalToBinary(number):
+    number = int(number)
+    binaryNumber = ''
+    while number > 0:
+        binaryNumber = str(number%2) + binaryNumber
+        number = int(number/2)
+    return(int(binaryNumber))
+
+def decimalToHex(number):
+    hexNum = str(hex(number)).upper()
+    return(hexNum[2:])
+
+def binaryToDecimal(number):
+    number = str(number)
+    multiplier = 1
+    result = 0
+    for i in range(len(number)-1, -1, -1):
+        result += int(number[i]) * multiplier
+        multiplier *= 2
+    return(result)
+
+def hexToDecimal(number):
+    number = str(number)
+    number = number.lower()
+    dictionary = {"a":10,"b":11,"c":12,"d":13,"e":14,"f":15}
+    multiplier = 1
+    result = 0
+    for i in range(len(number)-1, -1, -1):
+        try:
+            num = int(number[i])
+        except:
+            num = dictionary[number[i]]
+        result += num * multiplier
+        multiplier *= 16
+    return(result)
+
+def reverseString(string):
+    reversed = "" 
+    for i in range(len(string)-1, -1,-1):
+        reversed += string[i]
+    return(reversed)
+
 if __name__ == "__main__":
-    list1 = [1,14,5,64]
-    list2 = [2,87,8]
-    list3 = [53,0]
-    print(mergeLists(list1,list2,list3))
-    print(mergeListsAndSort(list1, list2, list3))
+    # list1 = [1,14,5,64]
+    # list2 = [2,87,8]
+    # list3 = [53,0]
+    # print(mergeLists(list1,list2,list3))
+    # print(mergeListsAndSort(list1, list2, list3))
+
+    # print(decimalToBinary(1073741823))
+    # print(binaryToDecimal(101101010010001))
+    # print(hexToDecimal(1544))
+    # print(decimalToHex(6549295001155813370))
+    print(reverseString("hello, my name is owen"))
