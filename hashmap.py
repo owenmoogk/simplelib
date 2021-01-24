@@ -13,9 +13,9 @@ class hashTable:
     def __setitem__(self, key, value):
         h = self.getHash(key)
 
-        for i in self.arr[h]:
-            if i[0] == key:
-                i = [key, value]
+        for i in range(0,len(self.arr[h])):
+            if self.arr[h][i][0] == key:
+                self.arr[h][i] = [key, value]
                 return
         self.arr[h].append([key, value])
 
