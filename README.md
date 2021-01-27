@@ -3,4 +3,4 @@ A python library to simplify basic python code... just for fun. (also SUPER usef
 
 Documentation is currently in progress. 
 
-https://github.com/owenmoogk/simplelib-documentation/tree/main
+https://github.com/owenmoogk/simplelib-documentation/
