@@ -14,6 +14,5 @@ def bubbleSort(elements):
 
 if __name__ == "__main__":
     elements = [43,2,5,3,46,312,65,24,2,4,6,3]
-
     bubbleSort(elements)
     print(elements)
