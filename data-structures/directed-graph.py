@@ -5,7 +5,8 @@ class Graph:
         self.graphDict = {}
         for start, end in self.edges:
             if start in self.graphDict:
-                self.graphDict[start].append(end)
+                if end not in self.graphDict[start]:
+                    self.graphDict[start].append(end)
             else:
                 self.graphDict[start] = [end]
 
@@ -94,6 +95,7 @@ if __name__ == "__main__":
     ]
 
     routeGraph = Graph(routes)
+    routeGraph.displayGraph()
     routeGraph.addNode("Toronto", "Ottawa")
     routeGraph.addEdge("Ottawa", "Mumbai")
     # routeGraph.displayGraph()
