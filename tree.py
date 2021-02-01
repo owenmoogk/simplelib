@@ -1,14 +1,16 @@
 class Node:
 
-    def __init__(self, data):
+    def __init__(self, data, parent = None):
         self.children = []
-        self.parent = None
+        self.parent = parent
         self.data = data
+        if parent:
+            self.parent.children.append(self)
 
-    def addChild(self, child):
+    def addChild(self, data):
         child.parent = self
         self.children.append(child)
-        
+
     def getLevel(self):
         level = 0
         p = self.parent
@@ -28,23 +30,19 @@ class Node:
 def buildProductTree():
     root = Node("Electronics")
 
-    laptop = Node("Laptop")
-    laptop.addChild(Node("Mac"))
-    laptop.addChild(Node("Surface"))
-    laptop.addChild(Node("Thinkpad"))
+    laptop = Node("Laptop", root)
+    Node('Macbook', laptop)
+    Node("Surface", laptop)
+    Node('Thinkpad', laptop)
 
-    cellphone = Node("Cell Phone")
-    cellphone.addChild(Node("iPhone"))
-    cellphone.addChild(Node("Google Pixel"))
-    cellphone.addChild(Node("Vivo"))
+    cellphone = Node("Cell Phone", root)
+    Node('IPhone', cellphone)
+    Node("Pixel", cellphone)
+    Node('Vivo', cellphone)
 
-    tv = Node("TV")
-    tv.addChild(Node("Samsung"))
-    tv.addChild(Node("LG"))
-
-    root.addChild(laptop)
-    root.addChild(cellphone)
-    root.addChild(tv)
+    tv = Node("TV", root)
+    Node("LG", tv)
+    Node('Samsung', tv)
 
     root.printTree()
 
