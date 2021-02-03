@@ -17,6 +17,7 @@
             <a href="/index.html#hashmap">Hashmaps</a>
             <a href="/index.html#bst">Binary Search Trees</a>
             <a href="/index.html#linked-list">Linked Lists</a>
+            <a href="/index.html#graphs">Graphs</a>
             <a href="/index.html#misc">Miscellaneous</a>
             <br>
             <a onclick="toggleDarkMode()" id="dark-mode-button">Dark mode</a>
@@ -159,6 +160,48 @@
 
             <br><hr>
 
+            <h2 id="graphs">Graphs</h2>
+            <p>
+                SimpleLib implements graphs as a data structure, using both directed and undirectional graphs. Currently they both employ the same functions,
+                as follows.
+            </p>
+            <table id="graph-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code>
+                routes = [<br>
+                    ("Mumbai", "Paris"),<br>
+                    ("Mumbai", "Dubai"),<br>
+                    ("Paris", "Dubai"),<br>
+                    ("Paris", "New York"),<br>
+                    ("Dubai", "New York"),<br>
+                    ("New York", "Toronto"),<br>
+                    ("Paris", "Mumbai")<br>
+                ]<br>
+                routeGraph = Graph(routes)<br>
+                routeGraph.addNode("Toronto", "Ottawa")<br>
+                routeGraph.addEdge("Ottawa", "Mumbai")<br>
+                routeGraph.displayGraph()<br>
+                print(routeGraph.getShortestPath("Mumbai", "Ottawa"))<br>
+            </code>
+            <br>
+            <p>Output:</p>
+            <code>
+                Mumbai -- ['Paris', 'Dubai']<br>
+                Paris -- ['Dubai', 'New York', 'Mumbai']<br>
+                Dubai -- ['New York']<br>
+                New York -- ['Toronto']<br>
+                Toronto -- ['Ottawa']<br>
+                Ottawa -- ['Mumbai']<br><br>
+                ['Mumbai', 'Paris', 'New York', 'Toronto', 'Ottawa']
+            </code>
+
+            <br><hr>
+
             <h2 id="misc">Miscellaneous</h2>
             <p>
                 Other functions that are very useful in navigating day to day python code. These are things I find myself doing constantly 
@@ -197,6 +240,7 @@
         populateTable("assets/bst.xml","bst-table")
         populateTable("assets/misc.xml", "misc-table")
         populateTable("assets/linked-list.xml", 'linked-list-table')
+        populateTable("assets/graph.xml", 'graph-table')
         addGithubLink()
     </script>
 </html>
