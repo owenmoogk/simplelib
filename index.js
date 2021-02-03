@@ -1,17 +1,3 @@
-darkmode = false
-function toggleDarkMode(){
-    $("*").toggleClass('darkMode')
-    if (darkmode){
-        darkmode = false
-        document.getElementById("dark-mode-button").text = "Dark mode"
-    }
-    else{
-        darkmode = true
-        document.getElementById("dark-mode-button").text = "Light mode"
-    }
-}
-
-
 // xml request
 function populateTable(xml, tableID) {
     var xmlhttp = new XMLHttpRequest();
