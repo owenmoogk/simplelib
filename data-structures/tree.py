@@ -7,7 +7,7 @@ class Node:
         if parent:
             self.parent.children.append(self)
 
-    def addChild(self, data):
+    def addChild(self, child):
         child.parent = self
         self.children.append(child)
 
@@ -41,10 +41,13 @@ def buildProductTree():
     Node('Vivo', cellphone)
 
     tv = Node("TV", root)
-    Node("LG", tv)
+    lg = Node("LG", tv)
     Node('Samsung', tv)
 
+    tv.addChild(Node("hello"))
+    
     root.printTree()
+    print(lg.getLevel())
 
 if __name__ == "__main__":
     buildProductTree()
