@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="">
+        <script src="darkmode.js"></script>
         <script src="index.js"></script>
         <script src="github-link.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
@@ -18,6 +19,7 @@
             <a href="/index.html#bst">Binary Search Trees</a>
             <a href="/index.html#linked-list">Linked Lists</a>
             <a href="/index.html#graphs">Graphs</a>
+            <a href="/index.html#tree">Trees</a>
             <a href="/index.html#misc">Miscellaneous</a>
             <br>
             <a onclick="toggleDarkMode()" id="dark-mode-button">Dark mode</a>
@@ -202,6 +204,58 @@
 
             <br><hr>
 
+            <h2 id="tree">Trees</h2>
+            <p>
+                In addition to binary search trees, SimpleLib also implements regular trees, with no limit on children. 
+            </p>
+            <table id="tree-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code>
+                root = Node("Electronics")<br>
+                laptop = Node("Laptop", root)<br>
+                Node('Macbook', laptop)<br>
+                Node("Surface", laptop)<br>
+                Node('Thinkpad', laptop)<br>
+                cellphone = Node("Cell Phone", root)<br>
+                Node('IPhone', cellphone)<br>
+                Node("Pixel", cellphone)<br>
+                Node('Vivo', cellphone)<br>
+                tv = Node("TV", root)<br>
+                lg = Node("LG", tv)<br>
+                Node('Samsung', tv)<br>
+                tv.addChild(Node("hello"))<br>
+                root.printTree()<br>
+                print(lg.getLevel())<br>
+            </code>
+            <br>
+            <p>Output:</p>
+            <code><pre>
+Electronics
+    Laptop
+        Macbook
+        Surface
+        Thinkpad
+    Cell Phone
+        IPhone
+        Pixel
+        Vivo
+    TV
+        LG
+        Samsung
+        hello
+Electronics
+    Laptop
+    Cell Phone
+    TV
+2</pre></code>
+
+            <br><hr>
+
             <h2 id="misc">Miscellaneous</h2>
             <p>
                 Other functions that are very useful in navigating day to day python code. These are things I find myself doing constantly 
@@ -241,6 +295,8 @@
         populateTable("assets/misc.xml", "misc-table")
         populateTable("assets/linked-list.xml", 'linked-list-table')
         populateTable("assets/graph.xml", 'graph-table')
+        populateTable("assets/tree.xml", 'tree-table')
         addGithubLink()
+        checkDarkMode()
     </script>
 </html>
