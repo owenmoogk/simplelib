@@ -84,6 +84,7 @@ p{
 }
 pre{
     margin: 0px;
+    font-family: 'Courier Prime', monospace;
 }
 code{
     border-radius: 20px;
