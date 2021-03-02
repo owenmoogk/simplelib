@@ -149,6 +149,16 @@ class Node:
         else:
             return(rheight + 1)
 
+    def getLeaves(self):
+        array = []
+        if self.left:
+            array += self.left.getLeaves()
+        if self.right:
+            array += self.right.getLeaves()
+        if not self.right and not self.left:
+            array.append(self.data)
+        return(array)
+
     def search(self, val):
         if self.data == val:
             return(True)
@@ -278,6 +288,8 @@ if __name__ == "__main__":
     numbersTree.display()
     numbersTree.deleteNodeAndChildren(-9)
     numbersTree.display()
-
+    numbersTree.addChild(154)
+    numbersTree.addChild(156)
+    print(numbersTree.getLeaves())
     # numbersTree.delete()
     # numbersTree.display()
