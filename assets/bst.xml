@@ -60,6 +60,10 @@
         <desc>Returns the maximum height / depth of tree.</desc>
     </row>
     <row>
+        <function>getLeaves()</function>
+        <desc>Returns an array of all the leaf nodes.</desc>
+    </row>
+    <row>
         <function>search(val)</function>
         <desc>Searches the tree for value. Returns true or false. val can be float or str.</desc>
     </row>
