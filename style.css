@@ -54,7 +54,7 @@ h2.darkMode{
     border-bottom: 10px solid rgba(0, 150, 255, 1);
 }
 p{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 .darkMode{
@@ -69,7 +69,6 @@ p{
     position: fixed;
 }
 .nav a{
-    margin-bottom: 10px;
     padding-left: 20px;
     font-size: 20px;
     color: black !important;
@@ -95,6 +94,7 @@ code{
     align-items: center;
     padding: 20px;
     font-family: 'Courier Prime', monospace;
+    font-size: 15px;
 }
 code.darkMode{
     background-color: rgb(60,60,60);
@@ -109,7 +109,7 @@ a:hover{
 table{
     width: 100%;
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
     border-spacing: 0px;
     padding-bottom: 20px;
 }
