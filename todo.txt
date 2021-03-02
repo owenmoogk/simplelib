@@ -1,10 +1,6 @@
-add sort function for linked lists(thats gonna be painful lol)
-
-add reversal of binary trees
-
 issubtree function(is a binary tree a subtree of another tree)
 
-maybe.... iterate build tree to have even sides
+self balancing binary tree
 
 add support for 2d arrays
     spiral matrix
