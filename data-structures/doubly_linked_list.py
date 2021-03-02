@@ -1,5 +1,4 @@
 class node:
-
     def __init__(self, data = None, next = None, prev = None):
         self.data = data
         self.next = next
@@ -50,6 +49,38 @@ class doublyLinkedList:
             if currentIndex == index:
                 return(currentNode.data)
             currentIndex += 1
+
+    def swap(self, index1, index2):
+        if index1 == index2:
+            return
+        data1 = self.get(index1)
+        data2 = self.get(index2)
+
+        if index1 > index2:
+            index1, index2 = index2, index1
+
+        currentIndex = 0
+        currentNode = self.head
+        while True:
+            currentNode = currentNode.next
+            if currentIndex == index1:
+                currentNode.data = data2
+            if currentIndex == index2:
+                currentNode.data = data1
+                # we can return here knowing that node one is done, as we performed the swap above
+                return
+            currentIndex += 1
+
+    def sort(self):
+        size = self.size()
+        for i in range(size-1):
+            swapped = False
+            for j in range(size-1-i):
+                if self.get(j) > self.get(j+1):
+                    self.swap(j, j+1)
+                    swapped = True
+            if not swapped:
+                break
 
     def size(self):
         currentNode = self.head
@@ -146,49 +177,41 @@ class doublyLinkedList:
             del(currentNode.data) 
             currentNode = nextNode
 
-if __name__ == "__main__":
+def buildDoublyLinkedList(array):
     mylist = doublyLinkedList()
+    for i in array:
+        mylist.append(i)
+    return(mylist)
+
+if __name__ == "__main__":
+    myArray = [1,6,5,1,6,5,18,9,-2]
+    mylist = buildDoublyLinkedList(myArray)
 
     mylist.display()
-    mylist.append(1)
-    mylist.append(6)
-    mylist.display()
-    print(mylist.size())
-    mylist.append("boiiiii smd")
-    print(mylist.size())
-    mylist.display()
-    print(mylist.get(1))
-    mylist.erase(1)
+    mylist.sort()
     mylist.display()
 
-    mylist.insertAtIndex("hello",1)
-    mylist.display()
+    # print(mylist.size())
+    # mylist.insertAtIndex("hello",5)
+    # mylist.display()
 
-    mylist.insertBefore(545,"hello")
-    mylist.insertAfter(545,"hello")
-    mylist.insertAfter(545,"boiiiii smd")
-    mylist.display()
-    print(mylist.size())
-    mylist.insertAtIndex("hello",5)
-    mylist.display()
+    # mylist.eraseItem(545)
+    # mylist.eraseItem(545)
+    # mylist.eraseItem(545)
+    # mylist.display()
 
-    mylist.eraseItem(545)
-    mylist.eraseItem(545)
-    mylist.eraseItem(545)
-    mylist.display()
+    # print(mylist.inList(1))
+    # print(mylist.inList(3))
 
-    print(mylist.inList(1))
-    print(mylist.inList(3))
+    # print(mylist.getItemIndex("boiiiii smd"))
+    # print(mylist.getItemIndex("hello"))
+    # print(mylist.getItemIndex(545))
 
-    print(mylist.getItemIndex("boiiiii smd"))
-    print(mylist.getItemIndex("hello"))
-    print(mylist.getItemIndex(545))
-
-    mylist.append(1)
-    mylist.append(6)
-    mylist.display()
-    mylist.erase(1)
-    mylist.insertAfter("hello",1)
-    mylist.display()
-    print("Size:",mylist.size())
-    print("'hello' index:",mylist.getItemIndex("hello"))
+    # mylist.append(1)
+    # mylist.append(6)
+    # mylist.display()
+    # mylist.erase(1)
+    # mylist.insertAfter("hello",1)
+    # mylist.display()
+    # print("Size:",mylist.size())
+    # print("'hello' index:",mylist.getItemIndex("hello"))
