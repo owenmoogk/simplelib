@@ -12,6 +12,14 @@
         <desc>Returns the data of the node at the specified index.</desc>
     </row>
     <row>
+        <function>swap(index1, index2)</function>
+        <desc>Swaps elements at 2 indexes.</desc>
+    </row>
+    <row>
+        <function>sort()</function>
+        <desc>Uses bubble sort to sort the linked list.</desc>
+    </row>
+    <row>
         <function>size()</function>
         <desc>Returns the length of the list.</desc>
     </row>
