@@ -1,0 +1,18 @@
+<table>
+    <row>
+        <function>__init__(len = 100)</function>
+        <desc>When initalizing dictionary, the length is the amount of memory allocated for the dictionary.</desc>
+    </row>
+    <row>
+        <function>__setitem__(key, value)</function>
+        <desc>Sets item in dictionary.</desc>
+    </row>
+    <row>
+        <function>__getitem__(key)</function>
+        <desc>Returns the value associated with the key.</desc>
+    </row>
+    <row>
+        <function>__delitem__(key)</function>
+        <desc>Deletes the item and key.</desc>
+    </row>
+</table>

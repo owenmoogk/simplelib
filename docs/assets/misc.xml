@@ -1,0 +1,74 @@
+<table>
+    <row>
+        <function>getInteger(message = "Input an integer: ", errorMsg = "Not an integer, Try again.")</function>
+        <desc>Prompts user for an input in console, and only returns once it is an int. (Returns the int). Optional parameters for the propt message and the error message.</desc>
+    </row>
+    <row>
+        <function>getFloat(message = "Input an number: ", errorMsg = "Not an number, Try again.")</function>
+        <desc>Prompts user for an input in console, and only returns once it is an float. (Returns the float). Optional parameters for the propt message and the error message.</desc>
+    </row>
+    <row>
+        <function>getString(message = "Input a string: ")</function>
+        <desc>Prompts user for input, and returns input as a string.</desc>
+    </row>
+    <row>
+        <function>isPrime(num)</function>
+        <desc>Returns true if prime, if not returns false.</desc>
+    </row>
+    <row>
+        <function>getPrimesUpTo(rangeMax)</function>
+        <desc>Returns a list of primes up to a given number, using the Sieve of Eratosthenes.</desc>
+    </row>
+    <row>
+        <function>primesInList(numList)</function>
+        <desc>Given a list of numbers, returns a list of only the primes.</desc>
+    </row>
+    <row>
+        <function>getDictKeys(dictionary)</function>
+        <desc>Given a dictionary, returns the keys as a list.</desc>
+    </row>
+    <row>
+        <function>mergeLists(*arg)</function>
+        <desc>Given some number of lists, returns one list with all the values merged.</desc>
+    </row>
+    <row>
+        <function>mergeListsAndSort(*arg)</function>
+        <desc>Merges some number of list in numerical / alphabetical order in a merge sort fashion, returning one list. Lists must only contain either strings or numbers, not both.</desc>
+    </row>
+    <row>
+        <function>removeDuplicatesFromList(array)</function>
+        <desc>Given some list, returns the list without duplicates.</desc>
+    </row>
+    <row>
+        <function>getMedian(array)</function>
+        <desc>Given a list of numbers, returns the median.</desc>
+    </row>
+    <row>
+        <function>getRange(array)</function>
+        <desc>Given a list of numbers, returns the range.</desc>
+    </row>
+    <row>
+        <function>getAverage(array)</function>
+        <desc>Given a list of numbers, returns the average.</desc>
+    </row>
+    <row>
+        <function>decimalToBinary(number)</function>
+        <desc>Given a decimal number, returns the binary counterpart. Input can be string or int.</desc>
+    </row>
+    <row>
+        <function>decimalToHex(number)</function>
+        <desc>Given a decimal number, returns the hexidecimal counterpart. Input must be int.</desc>
+    </row>
+    <row>
+        <function>binaryToDecimal(number)</function>
+        <desc>Given a binary number, returns the decimal counterpart. Input can be string or int.</desc>
+    </row>
+    <row>
+        <function>hexToDecimal(number)</function>
+        <desc>Given a hexidecimal number, returns the decimal counterpart. Input can be string or int.</desc>
+    </row>
+    <row>
+        <function>reverseString(string)</function>
+        <desc>Given a string, returns the reverse.</desc>
+    </row>
+</table>

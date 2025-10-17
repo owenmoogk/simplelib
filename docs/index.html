@@ -1,0 +1,293 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="">
+        <script src="darkmode.js"></script>
+        <script src="index.js"></script>
+        <script src="github-link.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>SimpleLib</title>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="#about">About</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#arrays">Arrays</a>
+            <a href="#hashmap">Hashmaps</a>
+            <a href="#bst">Binary Search Trees</a>
+            <a href="#linked-list">Linked Lists</a>
+            <a href="#graphs">Graphs</a>
+            <a href="#tree">Trees</a>
+            <a href="#misc">Miscellaneous</a>
+            <br>
+            <a onclick="toggleDarkMode()" id="dark-mode-button">Dark mode</a>
+        </div>
+        <div class="body">
+
+            <h1>SimpleLib</h1>
+            <p class="page-desc">
+                Welcome to SimpleLib. The python library to make everything a bit easier. Entirely open source (obviously). Enjoy.
+            </p>
+
+            <h2 id="about">About</h2>
+            <p>
+                This project was made mostly for fun, and to learn about complex data structures used in CS and software engineering. It is designed to provide
+                functions that ease handling binary trees, linked lists, arrays, and more.
+            </p>
+            <code> 
+                Examples will be shown like this throughout the documentation:
+            </code>
+
+            <br><hr>
+
+            <h2 id="downloads">Downloads</h2>
+            <p>
+                This project is entirely open source, which can be viewed on the project's
+                <a href="https://github.com/owenmoogk/simplelib">Github page</a>.
+            </p>
+
+            <br><hr>
+
+            <h2 id="hashmap">Hashmaps</h2>
+            <p>
+                The hashmap functions were implemented into SimpleLib for users to have a bit more access to the hashmap
+                than a python dictionary would allow. But in most cases, a dictionary is the best choice. Syntax is equivalent to a dictionary.
+                This implementation uses ascii key searching and list overlap.
+            </p>
+            <table id="hashmap-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code> 
+                t["march 6"] = 130 <br>
+                t["march 6"] = 20 <br>
+                t["april 2"] = "45 degrees" <br>
+                t["april 3"] = "23 degrees" <br>
+                print(t["march 6"]) <br>
+                print(t["april 2"])
+            </code>
+            <br>
+            <p>Output:</p>
+            <code>
+                20 <br>
+                45 degrees
+            </code>
+
+
+            <br><hr>
+
+            <h2 id="bst">Binary Search Trees</h2>
+            <p>
+                Binary search trees are useful for data storage, implementing a tree like structure. They are sorted with left and right tree branches,
+                increasing and decreasing respectivley. SimpleLib is compatible with both numerical and string search trees.
+            </p>
+            <table id="bst-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code> 
+                numbers = [8,56,13,4,3,5,6,7,-9,155,155,155] <br>
+                numbersTree = buildTree(numbers, 7) <br>
+                numbersTree.addChild(-14)<br>
+                numbersTree.display()<br>
+                print(numbersTree.rightSideView())<br>
+            </code>
+            <br>
+            <p>Output:</p>
+            <code><pre>
+           7        
+         /   \       
+        4    8_    
+      / \        \   
+      3 5       56_  
+      /   \      /      \
+  -9   6    13    155
+  /
+-14
+
+[7, 8, 56, 155]</pre>
+        </code>
+
+            <br><hr>
+
+            <h2 id="linked-list">Linked Lists</h2>
+            <p>
+                Linked lists are a data structure similar to arrays / lists, but are superior in some cases. Instead of items having indexes, 
+                they are all linked to eachother, leading to quicker 'big O' time for many operations. 
+                SimpleLib is compatible with both singly linked lists and doubly linked lists. At this point they both employ the same functions.
+            </p>
+            <table id="linked-list-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code>
+                mylist = singly_linked_list.singlyLinkedList() <br>
+                mylist.append(1)<br>
+                mylist.append(6)<br>
+                mylist.display()<br>
+                mylist.erase(1)<br>
+                mylist.insertAfter("hello",1)<br>
+                mylist.display()<br>
+                print("Size:",mylist.size())<br>
+                print("'hello' index:",mylist.getItemIndex("hello"))<br>
+            </code>
+            <br>
+            <p>Output:</p>
+            <code>
+                [1, 6] <br>
+                [1, 'hello']<br>
+                Size: 2<br>
+                'hello' index: 1
+            </code>
+
+            <br><hr>
+
+            <h2 id="graphs">Graphs</h2>
+            <p>
+                SimpleLib implements graphs as a data structure, using both directed and undirectional graphs. Currently they both employ the same functions,
+                as follows.
+            </p>
+            <table id="graph-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code>
+                routes = [<br>
+                    ("Mumbai", "Paris"),<br>
+                    ("Mumbai", "Dubai"),<br>
+                    ("Paris", "Dubai"),<br>
+                    ("Paris", "New York"),<br>
+                    ("Dubai", "New York"),<br>
+                    ("New York", "Toronto"),<br>
+                    ("Paris", "Mumbai")<br>
+                ]<br>
+                routeGraph = Graph(routes)<br>
+                routeGraph.addNode("Toronto", "Ottawa")<br>
+                routeGraph.addEdge("Ottawa", "Mumbai")<br>
+                routeGraph.displayGraph()<br>
+                print(routeGraph.getShortestPath("Mumbai", "Ottawa"))<br>
+            </code>
+            <br>
+            <p>Output:</p>
+            <code>
+                Mumbai -- ['Paris', 'Dubai']<br>
+                Paris -- ['Dubai', 'New York', 'Mumbai']<br>
+                Dubai -- ['New York']<br>
+                New York -- ['Toronto']<br>
+                Toronto -- ['Ottawa']<br>
+                Ottawa -- ['Mumbai']<br><br>
+                ['Mumbai', 'Paris', 'New York', 'Toronto', 'Ottawa']
+            </code>
+
+            <br><hr>
+
+            <h2 id="tree">Trees</h2>
+            <p>
+                In addition to binary search trees, SimpleLib also implements regular trees, with no limit on children. 
+            </p>
+            <table id="tree-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code>
+                root = Node("Electronics")<br>
+                laptop = Node("Laptop", root)<br>
+                Node('Macbook', laptop)<br>
+                Node("Surface", laptop)<br>
+                Node('Thinkpad', laptop)<br>
+                cellphone = Node("Cell Phone", root)<br>
+                Node('IPhone', cellphone)<br>
+                Node("Pixel", cellphone)<br>
+                Node('Vivo', cellphone)<br>
+                tv = Node("TV", root)<br>
+                lg = Node("LG", tv)<br>
+                Node('Samsung', tv)<br>
+                tv.addChild(Node("hello"))<br>
+                root.printTree()<br>
+                print(lg.getLevel())<br>
+            </code>
+            <br>
+            <p>Output:</p>
+            <code><pre>
+Electronics
+    Laptop
+        Macbook
+        Surface
+        Thinkpad
+    Cell Phone
+        IPhone
+        Pixel
+        Vivo
+    TV
+        LG
+        Samsung
+        hello
+Electronics
+    Laptop
+    Cell Phone
+    TV
+</pre></code>
+
+            <br><hr>
+
+            <h2 id="misc">Miscellaneous</h2>
+            <p>
+                Other functions that are very useful in navigating day to day python code. These are things I find myself doing constantly 
+                (or having to constantly google), so I figured write it once,
+                and then I don't have to worry about it again.
+            </p>
+            <table id="misc-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+            <p>Example:</p>
+            <code> 
+                list1 = [1,14,5,64] <br>
+                list2 = [2,87,8] <br>
+                list3 = [53,0] <br>
+                print(mergeLists(list1,list2,list3)) <br>
+                print(mergeListsAndSort(list1, list2, list3)) <br>
+                print(reverseString("hello, my name is owen"))
+            </code>
+            <br>
+            <p>Output:</p>
+            <code>
+                [1, 14, 5, 64, 2, 87, 8, 53, 0] <br>
+                [0, 1, 2, 5, 8, 14, 53, 64, 87] <br>
+                newo si eman ym ,olleh
+            </code>
+
+            <br><br>
+
+        </div>
+    </body>
+    <script>
+        populateTable("assets/hashmap.xml","hashmap-table")
+        populateTable("assets/bst.xml","bst-table")
+        populateTable("assets/misc.xml", "misc-table")
+        populateTable("assets/linked-list.xml", 'linked-list-table')
+        populateTable("assets/graph.xml", 'graph-table')
+        populateTable("assets/tree.xml", 'tree-table')
+        addGithubLink()
+        checkDarkMode()
+    </script>
+</html>

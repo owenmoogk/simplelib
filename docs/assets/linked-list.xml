@@ -1,0 +1,58 @@
+<table>
+    <row>
+        <function>append(data)</function>
+        <desc>Appends node to end of list with specified data.</desc>
+    </row>
+    <row>
+        <function>insertAtIndex(data, index)</function>
+        <desc>Inserts node with specified data at specified index.</desc>
+    </row>
+    <row>
+        <function>get(index)</function>
+        <desc>Returns the data of the node at the specified index.</desc>
+    </row>
+    <row>
+        <function>swap(index1, index2)</function>
+        <desc>Swaps elements at 2 indexes.</desc>
+    </row>
+    <row>
+        <function>sort()</function>
+        <desc>Uses bubble sort to sort the linked list.</desc>
+    </row>
+    <row>
+        <function>size()</function>
+        <desc>Returns the length of the list.</desc>
+    </row>
+    <row>
+        <function>display()</function>
+        <desc>Displays the linked list in console.</desc>
+    </row>
+    <row>
+        <function>erase(index)</function>
+        <desc>Deletes node at specified index.</desc>
+    </row>
+    <row>
+        <function>eraseItem(item)</function>
+        <desc>Searches through list for the specified item, and deletes it.</desc>
+    </row>
+    <row>
+        <function>insertBefore(data, item)</function>
+        <desc>Finds the item specified in the list, and appends a node with given data beforehand.</desc>
+    </row>
+    <row>
+        <function>insertAfter(data, item)</function>
+        <desc>Finds the item specified in the list, and appends a node with given data directly next.</desc>
+    </row>
+    <row>
+        <function>inList(item)</function>
+        <desc>Returns true if specified item is in list, otherwise returns false.</desc>
+    </row>
+    <row>
+        <function>getItemIndex(item)</function>
+        <desc>Searches through list for an item, and returns the index.</desc>
+    </row>
+    <row>
+        <function>deleteList()</function>
+        <desc>Deletes the list.</desc>
+    </row>
+</table>

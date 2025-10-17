@@ -1,0 +1,18 @@
+<table>
+    <row>
+        <function>__init__(data, parent = None)</function>
+        <desc>Initilizing the nodes, taked the data and an optional value for the parent.</desc>
+    </row>
+    <row>
+        <function>addChild(child)</function>
+        <desc>Adds a child to a node, given itself and a (child) node.</desc>
+    </row>
+    <row>
+        <function>getLevel(start, end)</function>
+        <desc>Given a node returns the level at which it occurs.</desc>
+    </row>
+    <row>
+        <function>printTree(level = -2)</function>
+        <desc>Prints the whole tree. If passed a value for level it will only print up to that level.</desc>
+    </row>
+</table>

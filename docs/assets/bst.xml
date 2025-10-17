@@ -1,0 +1,86 @@
+<table>
+    <row>
+        <function>buildTree(elements, rootVal = 0)</function>
+        <desc>Builds binary search tree with an array and a root value. Root value can be str or float.</desc>
+    </row>
+    <row>
+        <function>addChild(data)</function>
+        <desc>Adds a child to the binary search tree. Data is the value to append, float or str</desc>
+    </row>
+    <row>
+        <function>deleteHalfNodes()</function>
+        <desc>Deletes all half nodes in tree. (any node with only one child)</desc>
+    </row>
+    <row>
+        <function>findMin()</function>
+        <desc>Returns the minimum value in the tree (all left nodes)</desc>
+    </row>
+    <row>
+        <function>findMax()</function>
+        <desc>Returns the maximum value in the tree (all right nodes)</desc>
+    </row>
+    <row>
+        <function>rightSideView()</function>
+        <desc>Returns an array of the values from the right side view. From root to leaf.</desc>
+    </row>
+    <row>
+        <function>leftSideView()</function>
+        <desc>Returns an array of the values from the left side view. From root to leaf.</desc>
+    </row>
+    <row>
+        <function>calculateSum()</function>
+        <desc>Returns the sum of values in BST. Must be numerical(int or float) BST</desc>
+    </row>
+    <row>
+        <function>invertTree()</function>
+        <desc>Inverts the tree. Caution with this, as it breaks functionality of most other functions.</desc>
+    </row>
+    <row>
+        <function>inOrderTraversal()</function>
+        <desc>Returns list of nodes in array. (Left, Root, Right)</desc>
+    </row>
+    <row>
+        <function>preOrderTraversal()</function>
+        <desc>Returns list of nodes in array. (Root, Left, Right)</desc>
+    </row>
+    <row>
+        <function>postOrderTraversal()</function>
+        <desc>Returns list of nodes in array. (Left, Right, Root)</desc>
+    </row>
+    <row>
+        <function>levelOrderTraversal()</function>
+        <desc>Returns list of nodes in array, level by level.</desc>
+    </row>
+    <row>
+        <function>getLevel(level)</function>
+        <desc>Given an integer, returns all nodes in said level of the BST.</desc>
+    </row>
+    <row>
+        <function>getHeight()</function>
+        <desc>Returns the maximum height / depth of tree.</desc>
+    </row>
+    <row>
+        <function>getLeaves()</function>
+        <desc>Returns an array of all the leaf nodes.</desc>
+    </row>
+    <row>
+        <function>search(val)</function>
+        <desc>Searches the tree for value. Returns true or false. val can be float or str.</desc>
+    </row>
+    <row>
+        <function>deleteNode(val)</function>
+        <desc>Given data, finds and deletes the node.</desc>
+    </row>
+    <row>
+        <function>deleteNodeAndChildren(val)</function>
+        <desc>Searches the tree for value. Deletes the node and all subsequent children.</desc>
+    </row>
+    <row>
+        <function>display()</function>
+        <desc>Displays tree in console.</desc>
+    </row>
+    <row>
+        <function>delete()</function>
+        <desc>Deletes tree.</desc>
+    </row>
+</table>
