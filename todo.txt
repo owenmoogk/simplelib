@@ -9,3 +9,5 @@ add support for 2d arrays
 graphs find larger nodes, like in plane coding interview question
 
 graphs pathfinding algorithms
+
+add a priority queue

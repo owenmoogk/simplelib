@@ -43,3 +43,5 @@ if __name__ == "__main__":
     t["april 3"] = "23 degrees"
     print(t["march 6"])
     print(t["april 2"])
+    del t['march 6']
+    print(t["march 6"])

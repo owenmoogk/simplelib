@@ -293,3 +293,6 @@ if __name__ == "__main__":
     print(numbersTree.getLeaves())
     # numbersTree.delete()
     # numbersTree.display()
+    numbersTree.display()
+    numbersTree.invertTree()
+    numbersTree.display()
